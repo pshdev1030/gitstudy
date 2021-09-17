@@ -28,6 +28,7 @@ pwd //현재 폴더
 ls //경로의 폴더 확인
 ls -al //경로의 폴더 확인(숨김폴더 포함)
 cd //현재 경로 변경 앞에 조금만 입력하고 tab 누르면 자동완성
+rm -rf//삭제
 ```
 
 commit
@@ -46,4 +47,42 @@ commit으로 만들길 원하는 파일만 선택: 애드(Add)
 git add "파일명" //원하는 파일만 선택하기
 git commit -m "메시지" //메시지로 커밋 만들기
 git log //생성한 커밋 보기
+```
+
+원격저장소 만들고 푸시하기
+
+1. github에서 저장소 생성
+2. git 저장소 주소 알려주기
+
+```
+git remote add origin https://github.com/아이디/이름.git
+```
+
+3. 만든 커밋 푸시하기
+
+```
+git push origin master
+```
+
+4. 커밋 확인
+
+원격 저장소를 내 컴퓨터에 받아오기: 클론(clone)
+
+1. 내 컴퓨터에 폴더를 만들고 github의 저장소 받아오기
+
+```
+git clone https://github.com/아이디/이름.git
+git clone https://github.com/아이디/이름.git .//현재폴더에 받아온다.
+```
+
+2. app.js 파일 생성후 add commit push
+3. github에서 새 커밋 확인하기
+
+원격저장소의 데이터 가져오기:풀(pull)
+
+1. 내 컴퓨터에 해당 파일 없는거 확인
+2. 원격저장소에서 받아오기
+
+```
+git pull origin master
 ```
